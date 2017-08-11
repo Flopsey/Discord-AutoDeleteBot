@@ -1,0 +1,15 @@
+[DISCORD]
+command prefixes: ! ? $ . , % - _
+bot token:
+command channels:
+delete all messages: yes
+
+[INSTAPUSH]
+use Instapush: no
+app id:
+secret:
+event name:
+tracker:
+
+[DEBUGGING]
+debug: no
