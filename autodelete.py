@@ -37,7 +37,6 @@ command_channels = set()
 
 @client.event
 async def on_ready():
-    global command_channels
     for id_ in command_channel_ids:
         command_channels.add(discord.utils.get(client.get_all_channels(), id=id_))
 
@@ -54,7 +53,6 @@ async def delete_message_if_not_pinned(message: discord.Message):
 async def on_message(message: discord.Message):
     if message.author == client.user:
         return
-    global command_channels
     if message.channel in command_channels:
         if not delete_all:
             return
